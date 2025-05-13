@@ -1,10 +1,10 @@
 version: 3
 automerge: true
 projects:
-  - name: init/zerone-id
-    dir: terraform/init/zerone-id
+  - name: ecr/testuser/ap-northeast-2
+    dir: terraform/ecr/testuser/ap-northeast-2
     workspace: default
-    terraform_version: 1.3.7
+    terraform_version: 1.5.7
     autoplan:
       when_modified: [
          "*.tf"
@@ -13,8 +13,8 @@ projects:
     apply_requirements: []
     workflow: id
 
-  - name: vpc/tmcd_apnortheast2
-    dir: terraform/vpc/tmcd_apnortheast2
+  - name: vpc/jwsd_apnortheast2
+    dir: terraform/vpc/jwsd_apnortheast2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -39,8 +39,8 @@ projects:
     apply_requirements: []
     workflow: id
 
-  - name: iam/zerone-id
-    dir: terraform/iam/zerone-id
+  - name: iam/testuser
+    dir: terraform/iam/testuser
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -51,8 +51,8 @@ projects:
     apply_requirements: []
     workflow: id    
 
-  - name: kms/zerone-id/ap-northeast-2
-    dir: terraform/kms/zerone-id/ap-northeast-2
+  - name: kms/testuser/ap-northeast-2
+    dir: terraform/kms/testuser/ap-northeast-2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -63,8 +63,8 @@ projects:
     apply_requirements: []
     workflow: id  
     
-  - name: ssm/zerone-id/ap-northeast-2
-    dir: terraform/ssm/zerone-id/ap-northeast-2
+  - name: ssm/testuser/ap-northeast-2
+    dir: terraform/ssm/testuser/ap-northeast-2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -76,8 +76,8 @@ projects:
     apply_requirements: []
     workflow: id
 
-  - name: ecr/zerone-id/ap-northeast-2
-    dir: terraform/ecr/zerone-id/ap-northeast-2
+  - name: ecr/testuser/ap-northeast-2
+    dir: terraform/ecr/testuser/ap-northeast-2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -88,8 +88,8 @@ projects:
     apply_requirements: []
     workflow: id   
 
-  - name: securitygroup/zerone-id/tmcd_apnortheast2
-    dir: terraform/securitygroup/zerone-id/tmcd_apnortheast2
+  - name: securitygroup/testuser/jwsd_apnortheast2
+    dir: terraform/securitygroup/testuser/jwsd_apnortheast2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -101,8 +101,8 @@ projects:
     apply_requirements: []
     workflow: id       
 
-  - name: codebuild/zerone-id/tmcd_apnortheast2
-    dir: terraform/codebuild/zerone-id/tmcd_apnortheast2
+  - name: codebuild/testuser/jwsd_apnortheast2
+    dir: terraform/codebuild/testuser/jwsd_apnortheast2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -115,8 +115,8 @@ projects:
     apply_requirements: []
     workflow: id     
 
-  - name: acm/zerone-id/ap-northeast-2
-    dir: terraform/acm/zerone-id/ap-northeast-2
+  - name: acm/testuser/ap-northeast-2
+    dir: terraform/acm/testuser/ap-northeast-2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -128,8 +128,8 @@ projects:
     apply_requirements: []
     workflow: id
 
-  - name: platform/jenkins/tmcd_apnortheast2
-    dir: terraform/platform/jenkins/tmcd_apnortheast2
+  - name: platform/jenkins/jwsd_apnortheast2
+    dir: terraform/platform/jenkins/jwsd_apnortheast2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -141,8 +141,8 @@ projects:
     apply_requirements: []
     workflow: id  
 
-  - name: secretsmanager/zerone-id/ap-northeast-2
-    dir: terraform/secretsmanager/zerone-id/ap-northeast-2
+  - name: secretsmanager/testuser/ap-northeast-2
+    dir: terraform/secretsmanager/testuser/ap-northeast-2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -155,8 +155,8 @@ projects:
     apply_requirements: []
     workflow: id    
 
-  - name: ecs/demo/tmcd_apnortheast2
-    dir: terraform/ecs/demo/tmcd_apnortheast2
+  - name: ecs/demo/jwsd_apnortheast2
+    dir: terraform/ecs/demo/jwsd_apnortheast2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -168,8 +168,8 @@ projects:
     apply_requirements: []
     workflow: id      
 
-  - name: codedeploy/zerone-id/ap-northeast-2
-    dir: terraform/codedeploy/zerone-id/ap-northeast-2
+  - name: codedeploy/testuser/ap-northeast-2
+    dir: terraform/codedeploy/testuser/ap-northeast-2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -181,8 +181,8 @@ projects:
     apply_requirements: []
     workflow: id
 
-  - name: s3/zerone-id
-    dir: terraform/s3/zerone-id
+  - name: s3/testuser
+    dir: terraform/s3/testuser
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -194,8 +194,8 @@ projects:
     apply_requirements: []
     workflow: id  
 
-  - name: services/demoapp/tmcd_apnortheast2
-    dir: terraform/services/demoapp/tmcd_apnortheast2
+  - name: services/demoapp/jwsd_apnortheast2
+    dir: terraform/services/demoapp/jwsd_apnortheast2
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -207,8 +207,8 @@ projects:
     apply_requirements: []
     workflow: id
     
-  - name: eks/tmcd_apnortheast2/tmcdapne2-nhwy
-    dir: terraform/eks/tmcd_apnortheast2/tmcdapne2-nhwy
+  - name: eks/jwsd_apnortheast2/jwsdapne2-nhwy
+    dir: terraform/eks/jwsd_apnortheast2/jwsdapne2-nhwy
     workspace: default
     terraform_version: 1.7.0
     autoplan:
@@ -327,12 +327,12 @@ workflows:
       steps:
         - init:
             extra_args: [
-              '-backend-config="role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin"',
+              '-backend-config="role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin"',
               '-upgrade=false'
             ]
         - plan:
             extra_args: [
-              "-var 'assume_role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin'"
+              "-var 'assume_role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin'"
             ]
     apply:
       steps:
@@ -344,12 +344,12 @@ workflows:
       steps:
         - init:
             extra_args: [
-              '-backend-config="role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin"',
+              '-backend-config="role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin"',
               '-upgrade=false'
             ]
         - plan:
             extra_args: [
-              "-var 'assume_role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin'"
+              "-var 'assume_role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin'"
             ]
     apply:
       steps:
@@ -360,12 +360,12 @@ workflows:
       steps:
         - init:
             extra_args: [
-              '-backend-config="role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin"',
+              '-backend-config="role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin"',
               '-upgrade=false'
             ]
         - plan:
             extra_args: [
-              "-var 'assume_role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin'"
+              "-var 'assume_role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin'"
             ]
     apply:
       steps:
@@ -376,12 +376,12 @@ workflows:
       steps:
         - init:
             extra_args: [
-              '-backend-config="role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin"',
+              '-backend-config="role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin"',
               '-upgrade=false'
             ]
         - plan:
             extra_args: [
-              "-var 'assume_role_arn=arn:aws:iam::066346343248:role/atlantis-zerone-id-admin'"
+              "-var 'assume_role_arn=arn:aws:iam::573644187329:role/atlantis-testuser-admin'"
             ]
     apply:
       steps:
