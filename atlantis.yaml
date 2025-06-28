@@ -76,8 +76,8 @@ projects:
     apply_requirements: []
     workflow: id
 
-  - name: ecr/testuser/ap-northeast-2
-    dir: terraform/ecr/testuser/ap-northeast-2
+  - name: init/testuser
+    dir: terraform/init/testuser
     workspace: default
     terraform_version: 1.7.0
     autoplan:
