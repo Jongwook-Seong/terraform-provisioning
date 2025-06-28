@@ -15,8 +15,8 @@ variable "account_id" {
   default = {
     id        = "573644187329"
     art-id    = "816736805842"
-    datadog   = "464622532012"
-    sumologic = "926226587429"
+    # datadog   = "464622532012"
+    # sumologic = "926226587429"
   }
 }
 
@@ -25,25 +25,25 @@ variable "account_id" {
 variable "remote_state" {
   default = {
     vpc = {
-      tmcd_apnortheast2 = {
-        bucket = "zerone-id-apnortheast2-tfstate"
-        key    = "provisioning/terraform/vpc/tmcd_apnortheast2/terraform.tfstate"
+      jwsd_apnortheast2 = {
+        bucket = "testuser-apnortheast2-tfstate"
+        key    = "provisioning/terraform/vpc/jwsd_apnortheast2/terraform.tfstate"
         region = "ap-northeast-2"
       }
     }
     iam = {
-      zerone-id = {
-        bucket = "zerone-id-apnortheast2-tfstate"
-        key    = "provisioning/terraform/iam/zerone-id/terraform.tfstate"
+      testuser = {
+        bucket = "testuser-apnortheast2-tfstate"
+        key    = "provisioning/terraform/iam/testuser/terraform.tfstate"
         region = "ap-northeast-2"
       }
     }
 
     kms = {
-      zerone-id = {
+      testuser = {
         apne2 = {
-          bucket = "zerone-id-apnortheast2-tfstate"
-          key    = "provisioning/terraform/kms/zerone-id/ap-northeast-2/terraform.tfstate"
+          bucket = "testuser-apnortheast2-tfstate"
+          key    = "provisioning/terraform/kms/testuser/ap-northeast-2/terraform.tfstate"
           region = "ap-northeast-2"
         }
       }
@@ -51,35 +51,35 @@ variable "remote_state" {
 
     ecs = {
       nginx = {
-        tmcdapne2 = {
-          bucket = "zerone-id-apnortheast2-tfstate"
-          key    = "provisioning/terraform/ecs/nginx/tmcd_apnortheast2/terraform.tfstate"
+        jwsdapne2 = {
+          bucket = "testuser-apnortheast2-tfstate"
+          key    = "provisioning/terraform/ecs/nginx/jwsd_apnortheast2/terraform.tfstate"
           region = "ap-northeast-2"
         }
       }
       demo = {
-        tmcdapne2 = {
-          bucket = "zerone-id-apnortheast2-tfstate"
-          key    = "provisioning/terraform/ecs/demo/tmcd_apnortheast2/terraform.tfstate"
+        jwsdapne2 = {
+          bucket = "testuser-apnortheast2-tfstate"
+          key    = "provisioning/terraform/ecs/demo/jwsd_apnortheast2/terraform.tfstate"
           region = "ap-northeast-2"
         }
       }
     }
 
     security_group = {
-      zerone-id = {
-        tmcdapne2 = {
-          bucket = "zerone-id-apnortheast2-tfstate"
-          key    = "provisioning/terraform/securitygroup/zerone-id/tmcd_apnortheast2/terraform.tfstate"
+      testuser = {
+        jwsdapne2 = {
+          bucket = "testuser-apnortheast2-tfstate"
+          key    = "provisioning/terraform/securitygroup/testuser/jwsd_apnortheast2/terraform.tfstate"
           region = "ap-northeast-2"
         }
       }
     }
 
     codedeploy = {
-      zerone-id = {
+      testuser = {
         apne2 = {
-          bucket = "zerone-id-apnortheast2-tfstate"
+          bucket = "testuser-apnortheast2-tfstate"
           key    = "provisioning/terraform/codedeploy/ap-northeast-2/terraform.tfstate"
           region = "ap-northeast-2"
         }
@@ -87,27 +87,27 @@ variable "remote_state" {
     }
 
     secretsmanager = {
-      zerone-id = {
+      testuser = {
         apne2 = {
-          bucket = "zerone-id-apnortheast2-tfstate"
-          key    = "provisioning/terraform/secretsmanager/zerone-id/ap-northeast-2/terraform.tfstate"
+          bucket = "testuser-apnortheast2-tfstate"
+          key    = "provisioning/terraform/secretsmanager/testuser/ap-northeast-2/terraform.tfstate"
           region = "ap-northeast-2"
         }
       }
     }
 
     eks = {
-      tmcdapne2-nhwy = {
-        bucket = "zerone-id-apnortheast2-tfstate"
-        key    = "provisioning/terraform/eks/tmcd_apnortheast2/tmcdapne2-nhwy/terraform.tfstate"
+      jwsdapne2-nhwy = {
+        bucket = "testuser-apnortheast2-tfstate"
+        key    = "provisioning/terraform/eks/jwsd_apnortheast2/jwsdapne2-nhwy/terraform.tfstate"
         region = "ap-northeast-2"
       }
     }
 
     s3 = {
-      zerone-id = {
-        bucket = "zerone-id-apnortheast2-tfstate"
-        key    = "provisioning/terraform/s3/zerone-id/terraform.tfstate"
+      testuser = {
+        bucket = "testuser-apnortheast2-tfstate"
+        key    = "provisioning/terraform/s3/testuser/terraform.tfstate"
         region = "ap-northeast-2"
       }
     }

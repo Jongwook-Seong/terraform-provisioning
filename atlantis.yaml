@@ -1,8 +1,8 @@
 version: 3
 automerge: true
 projects:
-  - name: ecr/testuser/ap-northeast-2
-    dir: terraform/ecr/testuser/ap-northeast-2
+  - name: init/testuser
+    dir: terraform/init/testuser
     workspace: default
     terraform_version: 1.5.7
     autoplan:
