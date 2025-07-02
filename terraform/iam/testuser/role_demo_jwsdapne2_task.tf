@@ -1,10 +1,10 @@
-resource "aws_iam_role" "demo_tmcdapne2_task" {
-  name               = "demo-tmcdapne2-task"
+resource "aws_iam_role" "demo_jwsdapne2_task" {
+  name               = "demo-jwsdapne2-task"
   path               = "/"
-  assume_role_policy = data.aws_iam_policy_document.demo_tmcdapne2_task_assume_role_document.json
+  assume_role_policy = data.aws_iam_policy_document.demo_jwsdapne2_task_assume_role_document.json
 }
 
-data "aws_iam_policy_document" "demo_tmcdapne2_task_assume_role_document" {
+data "aws_iam_policy_document" "demo_jwsdapne2_task_assume_role_document" {
   statement {
     effect = "Allow"
     principals {
@@ -20,14 +20,14 @@ data "aws_iam_policy_document" "demo_tmcdapne2_task_assume_role_document" {
       test     = "StringEquals"
       variable = "aws:SourceAccount"
       values = [
-        "066346343248"
+        "573644187329"
       ]
     }
     condition {
       test     = "ArnLike"
       variable = "aws:SourceArn"
       values = [
-        "arn:aws:ecs:ap-northeast-2:066346343248:*"
+        "arn:aws:ecs:ap-northeast-2:573644187329:*"
       ]
     }
   }
@@ -35,7 +35,7 @@ data "aws_iam_policy_document" "demo_tmcdapne2_task_assume_role_document" {
 
 resource "aws_iam_role_policy" "demo_kms" {
   name   = "demo-kms-decryption"
-  role   = aws_iam_role.demo_tmcdapne2_task.id
+  role   = aws_iam_role.demo_jwsdapne2_task.id
   policy = data.aws_iam_policy_document.demo_kms_ssm_document.json
 }
 
@@ -55,7 +55,7 @@ data "aws_iam_policy_document" "demo_kms_ssm_document" {
     sid    = "AllowSecretsManagerAccess"
     effect = "Allow"
     resources = [
-      data.terraform_remote_state.secretsmanager.outputs.aws_secretsmanager_demo_tmcdapne2_id
+      data.terraform_remote_state.secretsmanager.outputs.aws_secretsmanager_demo_jwsdapne2_id
     ]
     actions = [
       "secretsmanager:GetSecretValue"
@@ -63,6 +63,6 @@ data "aws_iam_policy_document" "demo_kms_ssm_document" {
   }
 }
 
-output "demo_tmcdapne2_task_arn" {
-  value = aws_iam_role.demo_tmcdapne2_task.arn
+output "demo_jwsdapne2_task_arn" {
+  value = aws_iam_role.demo_jwsdapne2_task.arn
 }

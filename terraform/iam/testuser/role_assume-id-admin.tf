@@ -1,5 +1,5 @@
 #
-# zerone-id administrator
+# testuser administrator
 #
 resource "aws_iam_role" "assume_id_admin" {
   name                 = "assume-id-admin"
@@ -17,6 +17,7 @@ data "aws_iam_policy_document" "assume_id_admin_assume_role" {
       type = "AWS"
       identifiers = [
         "arn:aws:iam::${var.account_id.id}:root",
+        "arn:aws:iam::${var.account_id.id}:user/testuser",
       ]
     }
   }

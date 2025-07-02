@@ -107,8 +107,8 @@ data "aws_iam_policy_document" "gitaction_s3" {
 #       "iam:PassRole"
 #     ]
 #     resources = [
-#       aws_iam_role.demo_tmcdapne2_task.arn,
-#       aws_iam_role.demo_tmcdapne2_task_exec.arn
+#       aws_iam_role.demo_jwsdapne2_task.arn,
+#       aws_iam_role.demo_jwsdapne2_task_exec.arn
 #     ]
 #   }
 #   statement {
@@ -123,7 +123,7 @@ data "aws_iam_policy_document" "gitaction_s3" {
 #       "codedeploy:RegisterApplicationRevision"
 #     ]
 #     resources = [
-#       data.terraform_remote_state.demo_tmcdapne2.outputs.ecs_service_arn,
+#       data.terraform_remote_state.demo_jwsdapne2.outputs.ecs_service_arn,
 #       data.terraform_remote_state.codedeploy.outputs.demo_app_codedeploy_app_arn,
 #       data.terraform_remote_state.codedeploy.outputs.demo_app_codedeploy_deployment_group_arn,
 #       data.terraform_remote_state.codedeploy.outputs.demo_app_codedeploy_deployment_config_arn
