@@ -29,8 +29,8 @@ data "aws_iam_policy_document" "sumologic_s3_policy_document" {
       "s3:ListBucket"
     ]
     resources = [
-        "arn:aws:s3:::tmcdapne2-vpcflow-log",
-        "arn:aws:s3:::tmcdapne2-vpcflow-log/*",
+        "arn:aws:s3:::jwsdapne2-vpcflow-log",
+        "arn:aws:s3:::jwsdapne2-vpcflow-log/*",
     ]
   }
 }

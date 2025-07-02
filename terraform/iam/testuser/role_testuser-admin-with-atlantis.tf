@@ -1,8 +1,8 @@
 # #
-# # zerone-id administrator
+# # testuser administrator
 # #
-# resource "aws_iam_role" "atlantis_zerone-id_admin" {
-#   name = "atlantis-zerone-id-admin"
+# resource "aws_iam_role" "atlantis_testuser_admin" {
+#   name = "atlantis-testuser-admin"
 #   path = "/"
 
 #   assume_role_policy = jsonencode({
@@ -23,9 +23,9 @@
 
 # }
 
-# resource "aws_iam_role_policy" "atlantis_zerone-id_admin" {
-#   name = "atlantis-zerone-id-admin-passrole"
-#   role = aws_iam_role.atlantis_zerone-id_admin.id
+# resource "aws_iam_role_policy" "atlantis_testuser_admin" {
+#   name = "atlantis-testuser-admin-passrole"
+#   role = aws_iam_role.atlantis_testuser_admin.id
 
 #   policy = jsonencode({
 #     "Statement" : [
@@ -42,7 +42,7 @@
 
 # }
 
-# resource "aws_iam_role_policy_attachment" "atlantis_zerone-id_admin" {
-#   role       = aws_iam_role.atlantis_zerone-id_admin.id
+# resource "aws_iam_role_policy_attachment" "atlantis_testuser_admin" {
+#   role       = aws_iam_role.atlantis_testuser_admin.id
 #   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 # }
